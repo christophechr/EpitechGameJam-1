@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjjxpqcf4gsap"]
+
+[ext_resource type="Texture2D" uid="uid://b8rc5534typl0" path="res://Assets/centerButton.png" id="1_cct8c"]
+[ext_resource type="Texture2D" uid="uid://bejdjkhbjenx5" path="res://Assets/leftButton.png" id="1_x8o0w"]
+[ext_resource type="Texture2D" uid="uid://n3xq2xv424eb" path="res://Assets/RightButton.png" id="3_wn4t2"]
+
+[node name="BottomBar" type="HBoxContainer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="LeftButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(180, 75)
+layout_mode = 2
+texture_normal = ExtResource("1_x8o0w")
+
+[node name="CenterButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(180, 75)
+layout_mode = 2
+texture_normal = ExtResource("1_cct8c")
+
+[node name="RightButtton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(180, 75)
+layout_mode = 2
+texture_normal = ExtResource("3_wn4t2")
