@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://lswyqs3s8sx5"]
+[gd_scene load_steps=2 format=3 uid="uid://lswyqs3s8sx5"]
+
+[ext_resource type="PackedScene" uid="uid://bjjxpqcf4gsap" path="res://Scene/BottomBar.tscn" id="1_c6gte"]
 
 [node name="World" type="Node2D"]
+
+[node name="BottomBar" parent="." instance=ExtResource("1_c6gte")]
+offset_left = -3.0
+offset_top = 885.0
+offset_right = 545.0
+offset_bottom = 960.0
