@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://lswyqs3s8sx5"]
+[gd_scene load_steps=8 format=3 uid="uid://lswyqs3s8sx5"]
 
-[ext_resource type="PackedScene" uid="uid://bjjxpqcf4gsap" path="res://Scene/BottomBar.tscn" id="1_c6gte"]
+[ext_resource type="PackedScene" path="res://Scene/BottomBar.tscn" id="1_c6gte"]
 [ext_resource type="Script" path="res://Script/world.gd" id="1_r8bp6"]
 [ext_resource type="Texture2D" uid="uid://j274vub14bbq" path="res://Assets/back.png" id="2_n2vy4"]
 [ext_resource type="Script" path="res://Scene/TextEdit.gd" id="6_pk6io"]
@@ -8,13 +8,9 @@
 [ext_resource type="Script" path="res://Scene/Sprite2D.gd" id="7_jg86x"]
 [ext_resource type="Script" path="res://Scene/main_click_zone.gd" id="3_jhs6i"]
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="3_t3gxr"]
-[ext_resource type="Script" path="res://Scene/boulangère.gd" id="4_dlct6"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2yik6"]
-size = Vector2(567.5, 657.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5bye5"]
-size = Vector2(413, 214)
+[ext_resource type="Texture2D" uid="uid://bjrpnvdlax2au" path="res://Assets/choco.png" id="6_uthds"]
+[ext_resource type="Texture2D" uid="uid://4f2nlmnx2720" path="res://Assets/button.png" id="7_aqm5n"]
+[ext_resource type="Script" path="res://Scene/Sprite2D.gd" id="7_jg86x"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_r8bp6")
@@ -67,6 +63,111 @@ texture = ExtResource("6_uthds")
 autostart = true
 
 [connection signal="nb_choco" from="." to="TextEdit" method="_on_world_nb_choco"]
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(75, 75)
+offset_top = 248.0
+offset_right = 539.0
+offset_bottom = 885.0
+size_flags_horizontal = 0
+texture = ExtResource("2_n2vy4")
+expand_mode = 1
+
+[node name="UpgradeMenu" type="VBoxContainer" parent="TextureRect"]
+offset_left = 1.0
+offset_top = 10.0
+offset_right = 541.0
+offset_bottom = 885.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/UpgradeMenu"]
+custom_minimum_size = Vector2(25.385, 81.745)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/UpgradeMenu/HBoxContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("6_uthds")
+expand_mode = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="TextureRect/UpgradeMenu/HBoxContainer"]
+custom_minimum_size = Vector2(310.715, 0)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/UpgradeMenu/HBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2(104.17, 31.475)
+layout_mode = 2
+text = "buy upgrade"
+scroll_active = false
+
+[node name="Button" type="Button" parent="TextureRect/UpgradeMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "BUY"
+icon = ExtResource("7_aqm5n")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TextureRect/UpgradeMenu"]
+custom_minimum_size = Vector2(25.385, 81.745)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/UpgradeMenu/HBoxContainer2"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("6_uthds")
+expand_mode = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="TextureRect/UpgradeMenu/HBoxContainer2"]
+custom_minimum_size = Vector2(310.715, 0)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/UpgradeMenu/HBoxContainer2/CenterContainer"]
+custom_minimum_size = Vector2(104.17, 31.475)
+layout_mode = 2
+text = "buy upgrade"
+scroll_active = false
+
+[node name="Button" type="Button" parent="TextureRect/UpgradeMenu/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "BUY"
+icon = ExtResource("7_aqm5n")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="TextureRect/UpgradeMenu"]
+custom_minimum_size = Vector2(25.385, 81.745)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/UpgradeMenu/HBoxContainer3"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("6_uthds")
+expand_mode = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="TextureRect/UpgradeMenu/HBoxContainer3"]
+custom_minimum_size = Vector2(310.715, 0)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/UpgradeMenu/HBoxContainer3/CenterContainer"]
+custom_minimum_size = Vector2(104.17, 31.475)
+layout_mode = 2
+text = "buy upgrade"
+scroll_active = false
+
+[node name="Button" type="Button" parent="TextureRect/UpgradeMenu/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "BUY"
+icon = ExtResource("7_aqm5n")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
 [connection signal="button_up" from="BottomBar/Right" to="." method="_on_right_button_up"]
 [connection signal="button_up" from="BottomBar/Center" to="." method="_on_center_button_up"]
 [connection signal="button_up" from="BottomBar/Left" to="." method="_on_left_button_up"]
