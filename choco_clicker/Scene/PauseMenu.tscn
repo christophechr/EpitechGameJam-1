@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://csj2b5ssqx4v8"]
+
+[ext_resource type="Script" path="res://Scripts/ResumeButtonSettings.gd" id="1_42qs6"]
+[ext_resource type="Script" path="res://Scripts/OptionsButtonSettings.gd" id="2_3gjpw"]
+
+[node name="PauseMenu" type="Node2D"]
+
+[node name="Buttons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 270.0
+offset_top = 430.0
+offset_right = 270.0
+offset_bottom = 430.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+
+[node name="Resume" type="Button" parent="Buttons"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Resume"
+script = ExtResource("1_42qs6")
+
+[node name="Settings" type="Button" parent="Buttons"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = 24.5
+offset_right = 35.0
+offset_bottom = 55.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Settings
+"
+script = ExtResource("2_3gjpw")
