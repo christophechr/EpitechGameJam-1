@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://lswyqs3s8sx5"]
+[gd_scene load_steps=10 format=3 uid="uid://lswyqs3s8sx5"]
 
 [ext_resource type="PackedScene" path="res://Scene/BottomBar.tscn" id="1_c6gte"]
 [ext_resource type="Script" path="res://Script/world.gd" id="1_r8bp6"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bjrpnvdlax2au" path="res://Assets/choco.png" id="6_uthds"]
 [ext_resource type="Texture2D" uid="uid://4f2nlmnx2720" path="res://Assets/button.png" id="7_aqm5n"]
 [ext_resource type="Script" path="res://Scene/Sprite2D.gd" id="7_jg86x"]
+[ext_resource type="Texture2D" uid="uid://eyej14ixgcql" path="res://Assets/menuBackground.png" id="8_3h1ca"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_r8bp6")
@@ -60,11 +61,11 @@ texture = ExtResource("6_uthds")
 autostart = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
-custom_minimum_size = Vector2(75, 75)
 offset_top = 248.0
 offset_right = 539.0
 offset_bottom = 885.0
 size_flags_horizontal = 0
+texture = ExtResource("8_3h1ca")
 expand_mode = 1
 
 [node name="UpgradeMenu" type="VBoxContainer" parent="TextureRect"]
@@ -90,7 +91,7 @@ custom_minimum_size = Vector2(310.715, 0)
 layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/UpgradeMenu/HBoxContainer/CenterContainer"]
-custom_minimum_size = Vector2(104.17, 31.475)
+custom_minimum_size = Vector2(104.015, 31.475)
 layout_mode = 2
 text = "buy upgrade"
 scroll_active = false
