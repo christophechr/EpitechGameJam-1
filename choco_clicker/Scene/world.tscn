@@ -1,16 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://lswyqs3s8sx5"]
+[gd_scene load_steps=4 format=3 uid="uid://lswyqs3s8sx5"]
 
 [ext_resource type="PackedScene" uid="uid://bjjxpqcf4gsap" path="res://Scene/BottomBar.tscn" id="1_c6gte"]
+[ext_resource type="Script" path="res://Script/world.gd" id="1_r8bp6"]
 [ext_resource type="Texture2D" uid="uid://j274vub14bbq" path="res://Assets/back.png" id="2_n2vy4"]
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_r8bp6")
 
 [node name="Back" type="Sprite2D" parent="."]
 position = Vector2(270, 480)
 texture = ExtResource("2_n2vy4")
 
 [node name="BottomBar" parent="." instance=ExtResource("1_c6gte")]
-offset_left = -3.0
-offset_top = 885.0
-offset_right = 545.0
-offset_bottom = 960.0
+offset_left = -6.0
+offset_top = 884.0
+offset_right = 554.0
+offset_bottom = 959.0
+
+[node name="Left" type="TextureButton" parent="BottomBar"]
+layout_mode = 2
+
+[node name="Center" type="TextureButton" parent="BottomBar"]
+layout_mode = 2
+
+[node name="Right" type="TextureButton" parent="BottomBar"]
+layout_mode = 2
+
+[connection signal="button_up" from="BottomBar/Left" to="." method="_on_left_button_up"]
+[connection signal="button_up" from="BottomBar/Center" to="." method="_on_center_button_up"]
+[connection signal="button_up" from="BottomBar/Right" to="." method="_on_right_button_up"]
