@@ -1,4 +1,5 @@
 extends Sprite2D
+signal click
 
 var normal_size = Vector2(1, 1)
 var smaller_size = Vector2(0.9, 0.9)
@@ -14,6 +15,7 @@ func _process(delta):
 
 func _on_choco_button_up():
 	scale = normal_size
+	emit_signal("click")
 
 func _on_choco_button_down():
 	scale = smaller_size

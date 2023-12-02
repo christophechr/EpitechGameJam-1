@@ -42,5 +42,6 @@ offset_bottom = 304.0
 [connection signal="button_up" from="BottomBar/Right" to="." method="_on_right_button_up"]
 [connection signal="button_up" from="BottomBar/Center" to="." method="_on_center_button_up"]
 [connection signal="button_up" from="BottomBar/Left" to="." method="_on_left_button_up"]
+[connection signal="click" from="Sprite2D" to="." method="_on_sprite_2d_click"]
 [connection signal="button_down" from="Sprite2D/choco" to="Sprite2D" method="_on_choco_button_down"]
 [connection signal="button_up" from="Sprite2D/choco" to="Sprite2D" method="_on_choco_button_up"]
