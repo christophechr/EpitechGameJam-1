@@ -17,15 +17,15 @@ offset_top = 884.0
 offset_right = 554.0
 offset_bottom = 959.0
 
-[node name="Left" type="TextureButton" parent="BottomBar"]
+[node name="Right" type="TextureButton" parent="BottomBar"]
 layout_mode = 2
 
 [node name="Center" type="TextureButton" parent="BottomBar"]
 layout_mode = 2
 
-[node name="Right" type="TextureButton" parent="BottomBar"]
+[node name="Left" type="TextureButton" parent="BottomBar"]
 layout_mode = 2
 
-[connection signal="button_up" from="BottomBar/Left" to="." method="_on_left_button_up"]
-[connection signal="button_up" from="BottomBar/Center" to="." method="_on_center_button_up"]
 [connection signal="button_up" from="BottomBar/Right" to="." method="_on_right_button_up"]
+[connection signal="button_up" from="BottomBar/Center" to="." method="_on_center_button_up"]
+[connection signal="button_up" from="BottomBar/Left" to="." method="_on_left_button_up"]
