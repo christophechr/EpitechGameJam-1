@@ -64,36 +64,37 @@ func _on_left_pressed():
 	menu2.visible = false
 
 func _on_button_button_up():
-	if choco_nbr > 50 * nb_rouleau:
-		choco_nbr -= 50 * nb_rouleau
+	if choco_nbr > 50 * (nb_rouleau + 1):
+		choco_nbr -= 50 * (nb_rouleau + 1)
 		nb_rouleau += 1
 		roll_nb.text = str(nb_rouleau)
 		roll_cost.text = str(50 * nb_rouleau)
 
 func _on_button_2_button_up():
-	if choco_nbr > 250 * nb_baker:
-		choco_nbr -= 250 * nb_baker
+	if choco_nbr >= 250 * (nb_baker + 1):
+		choco_nbr -= 250 * (nb_baker + 1)
 		nb_baker += 1
 		baker_nb.text = str(nb_baker)
 		baker_cost.text = str(250 * nb_baker)
 
 func _on_button_3_button_up():
-	if choco_nbr > 1000 * nb_bakery:
-		choco_nbr -= 1000 * nb_bakery
+	if choco_nbr >= 1000 * (nb_bakery + 1):
+		choco_nbr -= 1000 * (nb_bakery + 1)
 		nb_bakery += 1
 		bakery_nb.text = str(nb_bakery)
 		bakery_cost.text = str(1000 * nb_bakery)
 
 
 func _on_button_4_button_up():
-	if choco_nbr > 5 * level_click:
-		choco_nbr -= 5 * level_click
-		level_click *= 2
+	if choco_nbr >= 25 * level_click:
+		choco_nbr -= round(25 * level_click)
+		level_click *= 1.5
+		level_click = round(level_click)
 		click_nb.text = str(level_click)
-		click_cost.text = str(5 * level_click)
+		click_cost.text = str(round(25 * level_click))
 
 func _on_button_5_button_up():
-	if choco_nbr > 10000 * mult_up:
+	if choco_nbr >= 10000 * mult_up:
 		choco_nbr -= 10000 * mult_up
 		mult_up += 1
 		house_nb.text = str(mult_up)

@@ -324,7 +324,7 @@ offset_left = 300.0
 offset_top = 29.0
 offset_right = 372.0
 offset_bottom = 69.0
-text = "1"
+text = "25"
 
 [connection signal="nb_choco" from="." to="TextEdit" method="_on_world_nb_choco"]
 [connection signal="pressed" from="Right" to="." method="_on_right_pressed"]
