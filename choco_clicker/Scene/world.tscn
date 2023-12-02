@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://lswyqs3s8sx5"]
+[gd_scene load_steps=17 format=3 uid="uid://lswyqs3s8sx5"]
 
 [ext_resource type="Script" path="res://Script/world.gd" id="1_r8bp6"]
 [ext_resource type="Texture2D" uid="uid://j274vub14bbq" path="res://Assets/back.png" id="2_n2vy4"]
@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://dvvl3wc82wav8" path="res://Assets/jasonderouleau.png" id="11_o7pb5"]
 [ext_resource type="Texture2D" uid="uid://bgmrw8u2a3d1a" path="res://Assets/baker.png" id="13_jj6px"]
 [ext_resource type="Texture2D" uid="uid://b1jwpthres8as" path="res://Assets/bakery.png" id="14_p7bsy"]
+[ext_resource type="Texture2D" uid="uid://c8jth0ehedj3o" path="res://Assets/click.png" id="15_bdh5h"]
+[ext_resource type="Texture2D" uid="uid://ctwib8b1lufvt" path="res://Assets/house.png" id="16_tptmj"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_r8bp6")
@@ -220,6 +222,110 @@ text = "50"
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_top = 248.0
+offset_right = 539.0
+offset_bottom = 885.0
+size_flags_horizontal = 0
+texture = ExtResource("8_3h1ca")
+expand_mode = 1
+
+[node name="UpgradeMenu" type="VBoxContainer" parent="TextureRect2"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 10.0
+offset_right = 540.0
+offset_bottom = 637.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect2/UpgradeMenu"]
+custom_minimum_size = Vector2(25.385, 81.745)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect2/UpgradeMenu/HBoxContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("15_bdh5h")
+expand_mode = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="TextureRect2/UpgradeMenu/HBoxContainer"]
+custom_minimum_size = Vector2(310.715, 0)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect2/UpgradeMenu/HBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2(104.015, 31.475)
+layout_mode = 2
+text = "Click
+"
+scroll_active = false
+
+[node name="Button4" type="Button" parent="TextureRect2/UpgradeMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "BUY"
+icon = ExtResource("7_aqm5n")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TextureRect2/UpgradeMenu"]
+custom_minimum_size = Vector2(25.385, 81.745)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect2/UpgradeMenu/HBoxContainer2"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("16_tptmj")
+expand_mode = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="TextureRect2/UpgradeMenu/HBoxContainer2"]
+custom_minimum_size = Vector2(310.715, 0)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect2/UpgradeMenu/HBoxContainer2/CenterContainer"]
+custom_minimum_size = Vector2(104.17, 50)
+layout_mode = 2
+text = "Building productivity"
+scroll_active = false
+
+[node name="Button5" type="Button" parent="TextureRect2/UpgradeMenu/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "BUY"
+icon = ExtResource("7_aqm5n")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="click_nb" type="RichTextLabel" parent="TextureRect2"]
+offset_left = 120.0
+offset_top = 33.0
+offset_right = 192.0
+offset_bottom = 73.0
+text = "0"
+
+[node name="house_cost" type="RichTextLabel" parent="TextureRect2"]
+offset_left = 301.0
+offset_top = 118.0
+offset_right = 373.0
+offset_bottom = 158.0
+text = "10000"
+
+[node name="house_nb" type="RichTextLabel" parent="TextureRect2"]
+offset_left = 118.0
+offset_top = 117.0
+offset_right = 190.0
+offset_bottom = 157.0
+text = "0"
+
+[node name="click_cost" type="RichTextLabel" parent="TextureRect2"]
+offset_left = 300.0
+offset_top = 29.0
+offset_right = 372.0
+offset_bottom = 69.0
+text = "1"
+
 [connection signal="nb_choco" from="." to="TextEdit" method="_on_world_nb_choco"]
 [connection signal="pressed" from="Right" to="." method="_on_right_pressed"]
 [connection signal="pressed" from="Center" to="." method="_on_center_pressed"]
@@ -231,3 +337,5 @@ autostart = true
 [connection signal="button_up" from="TextureRect1/UpgradeMenu/HBoxContainer2/Button2" to="." method="_on_button_2_button_up"]
 [connection signal="button_up" from="TextureRect1/UpgradeMenu/HBoxContainer3/Button3" to="." method="_on_button_3_button_up"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="button_up" from="TextureRect2/UpgradeMenu/HBoxContainer/Button4" to="." method="_on_button_4_button_up"]
+[connection signal="button_up" from="TextureRect2/UpgradeMenu/HBoxContainer2/Button5" to="." method="_on_button_5_button_up"]
