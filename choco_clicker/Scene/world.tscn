@@ -1,16 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://lswyqs3s8sx5"]
+[gd_scene load_steps=6 format=3 uid="uid://lswyqs3s8sx5"]
 
-[ext_resource type="PackedScene" path="res://Scene/BottomBar.tscn" id="1_c6gte"]
+[ext_resource type="PackedScene" uid="uid://bjjxpqcf4gsap" path="res://Scene/BottomBar.tscn" id="1_c6gte"]
 [ext_resource type="Script" path="res://Script/world.gd" id="1_r8bp6"]
 [ext_resource type="Texture2D" uid="uid://j274vub14bbq" path="res://Assets/back.png" id="2_n2vy4"]
-[ext_resource type="Script" path="res://Scene/main_click_zone.gd" id="3_jhs6i"]
-[ext_resource type="Script" path="res://Scene/boulangère.gd" id="4_dlct6"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2yik6"]
-size = Vector2(567.5, 657.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5bye5"]
-size = Vector2(413, 214)
+[ext_resource type="Texture2D" uid="uid://bjrpnvdlax2au" path="res://Assets/choco.png" id="6_uthds"]
+[ext_resource type="Script" path="res://Scene/Sprite2D.gd" id="7_jg86x"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_r8bp6")
@@ -34,22 +28,19 @@ layout_mode = 2
 [node name="Left" type="TextureButton" parent="BottomBar"]
 layout_mode = 2
 
-[node name="main_click_zone" type="Area2D" parent="."]
-script = ExtResource("3_jhs6i")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(266, 552)
+texture = ExtResource("6_uthds")
+script = ExtResource("7_jg86x")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="main_click_zone"]
-position = Vector2(269.25, 552.25)
-shape = SubResource("RectangleShape2D_2yik6")
-
-[node name="boulangère" type="Area2D" parent="."]
-script = ExtResource("4_dlct6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="boulangère"]
-position = Vector2(309.5, 112)
-shape = SubResource("RectangleShape2D_5bye5")
+[node name="choco" type="TextureButton" parent="Sprite2D"]
+offset_left = -292.0
+offset_top = -296.0
+offset_right = 308.0
+offset_bottom = 304.0
 
 [connection signal="button_up" from="BottomBar/Right" to="." method="_on_right_button_up"]
 [connection signal="button_up" from="BottomBar/Center" to="." method="_on_center_button_up"]
 [connection signal="button_up" from="BottomBar/Left" to="." method="_on_left_button_up"]
-[connection signal="input_event" from="main_click_zone" to="main_click_zone" method="_on_input_event"]
-[connection signal="input_event" from="boulangère" to="main_click_zone" method="_on_boulangère_input_event"]
+[connection signal="button_down" from="Sprite2D/choco" to="Sprite2D" method="_on_choco_button_down"]
+[connection signal="button_up" from="Sprite2D/choco" to="Sprite2D" method="_on_choco_button_up"]
