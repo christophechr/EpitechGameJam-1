@@ -1,6 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://cros60xmx8ox0"]
-
-[ext_resource type="Script" path="res://scripts/options.gd" id="1_ce885"]
+[gd_scene format=3 uid="uid://cros60xmx8ox0"]
 
 [node name="TestPlayer" type="Node2D"]
 
@@ -20,6 +18,5 @@ text = "Resume"
 [node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Options"
-script = ExtResource("1_ce885")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="MarginContainer/VBoxContainer/Options" method="_on_pressed"]

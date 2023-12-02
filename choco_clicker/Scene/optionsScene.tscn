@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://8aaqusfb4suq"]
 
-[ext_resource type="Script" path="res://scripts/resume.gd" id="1_ma81e"]
+[ext_resource type="Script" path="res://Scripts/BackButtonSettings.gd" id="1_wlevi"]
 
 [node name="OptionsScene" type="Node2D"]
 
@@ -80,6 +80,6 @@ offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Resume"
-script = ExtResource("1_ma81e")
+script = ExtResource("1_wlevi")
 
 [connection signal="pressed" from="Control/Resume" to="Control/Resume" method="_on_pressed"]

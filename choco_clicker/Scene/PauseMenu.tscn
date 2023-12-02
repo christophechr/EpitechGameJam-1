@@ -50,3 +50,6 @@ grow_vertical = 2
 text = "Settings
 "
 script = ExtResource("2_3gjpw")
+
+[connection signal="pressed" from="Buttons/Resume" to="Buttons/Resume" method="_on_pressed"]
+[connection signal="pressed" from="Buttons/Settings" to="Buttons/Settings" method="_on_pressed"]
