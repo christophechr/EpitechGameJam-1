@@ -178,6 +178,7 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="roll_nb" type="RichTextLabel" parent="TextureRect1"]
+layout_mode = 0
 offset_left = 120.0
 offset_top = 33.0
 offset_right = 192.0
@@ -185,6 +186,7 @@ offset_bottom = 73.0
 text = "0"
 
 [node name="bakery_cost" type="RichTextLabel" parent="TextureRect1"]
+layout_mode = 0
 offset_left = 302.0
 offset_top = 207.0
 offset_right = 374.0
@@ -192,6 +194,7 @@ offset_bottom = 247.0
 text = "1000"
 
 [node name="bakery_nb" type="RichTextLabel" parent="TextureRect1"]
+layout_mode = 0
 offset_left = 119.0
 offset_top = 204.0
 offset_right = 191.0
@@ -199,6 +202,7 @@ offset_bottom = 244.0
 text = "0"
 
 [node name="baker_cost" type="RichTextLabel" parent="TextureRect1"]
+layout_mode = 0
 offset_left = 301.0
 offset_top = 118.0
 offset_right = 373.0
@@ -206,6 +210,7 @@ offset_bottom = 158.0
 text = "250"
 
 [node name="baker_nb" type="RichTextLabel" parent="TextureRect1"]
+layout_mode = 0
 offset_left = 118.0
 offset_top = 117.0
 offset_right = 190.0
@@ -213,6 +218,7 @@ offset_bottom = 157.0
 text = "0"
 
 [node name="roll_cost" type="RichTextLabel" parent="TextureRect1"]
+layout_mode = 0
 offset_left = 300.0
 offset_top = 29.0
 offset_right = 372.0
@@ -299,6 +305,7 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="click_nb" type="RichTextLabel" parent="TextureRect2"]
+layout_mode = 0
 offset_left = 120.0
 offset_top = 33.0
 offset_right = 192.0
@@ -306,6 +313,7 @@ offset_bottom = 73.0
 text = "0"
 
 [node name="house_cost" type="RichTextLabel" parent="TextureRect2"]
+layout_mode = 0
 offset_left = 301.0
 offset_top = 118.0
 offset_right = 373.0
@@ -313,6 +321,7 @@ offset_bottom = 158.0
 text = "10000"
 
 [node name="house_nb" type="RichTextLabel" parent="TextureRect2"]
+layout_mode = 0
 offset_left = 118.0
 offset_top = 117.0
 offset_right = 190.0
@@ -320,6 +329,7 @@ offset_bottom = 157.0
 text = "0"
 
 [node name="click_cost" type="RichTextLabel" parent="TextureRect2"]
+layout_mode = 0
 offset_left = 300.0
 offset_top = 29.0
 offset_right = 372.0
